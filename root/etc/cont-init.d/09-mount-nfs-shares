@@ -1,0 +1,16 @@
+#!/usr/bin/with-contenv bash
+
+
+rpcbind
+
+mounts=`/nfs-mounts`
+for mnt in $mounts; do
+  src=$(echo $mnt | awk -F':' '{ print $1 }')
+  target=$(echo $mnt | awk -F':' '{ print $2 }')
+  targets+=("$target")
+
+  mkdir -p $target
+
+  mount -t nfs ${NFS_SERVER}:${src} ${target}
+  echo "INFO: '$src' successfully mounted at '$target'"
+done

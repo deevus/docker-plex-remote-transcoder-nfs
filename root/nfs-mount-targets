@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/nfs-mounts | awk -F':' '{ print $2 }'
