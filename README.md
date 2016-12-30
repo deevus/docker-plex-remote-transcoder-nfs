@@ -1,4 +1,4 @@
-# Docker containers for Plex Media Server with Remote Transcoding Support
+# Docker containers for Plex Media Server with Remote Transcoding Support (NFS slave)
 
 This is an auxiliary slave image for [Docker containers for Plex Media Server with Remote Transcoding Support](https://github.com/deevus/docker-plex-remote-transcoder) that adds NFS support __inside__ the container.
 
