@@ -1,4 +1,4 @@
-FROM deevus/plex-remote-transcoder:slave-latest
+FROM deevus/plex-remote-transcoder:slave-plexpass
 
 ENV NFS_SERVER=$MASTER_IP \
     NFS_MOUNTS=""
